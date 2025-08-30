@@ -6,6 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="css/landing_page.css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/chef.png">
 </head>
 
 <body>
@@ -17,8 +18,8 @@
                     <h3>Recipick</h3>
                 </div>
                 <div class="cta_btn_box">
-                    <button class="l_nav_btn l_i">Login</button>
-                    <button class="l_nav_btn g_s">Get started</button>
+                    <button class="l_nav_btn l_i" onclick="location.href='login.html'">Login</button>
+                    <button class="l_nav_btn g_s" onclick="location.href='register.html'">Get started</button>
                 </div>
             </nav>
         </div>
@@ -42,13 +43,13 @@
                             personalized recipes based on exactly what you have in your kitchen right now.
                         </p>
                         <div class="stc-acc-box">
-                            <button class="stc-btn">
+                            <button onclick="location.href='register.html'" class="stc-btn">
                                 <div class="stc-box">
                                     <p>Start cooking today</p>
                                     <img class="btn-arrow" src="assets/white-arrow.png" alt="green arrow" />
                                 </div>
                             </button>
-                            <button class="acc_pres_btn">
+                            <button onclick="location.href='login.html'" class="acc_pres_btn">
                                 I have an account
                             </button>
                         </div>
@@ -68,6 +69,69 @@
             </div>
         </div>
     </section>
+    <section class="problem-Container">
+        <div class="problem-child1">
+            <div class="problem-child2">
+                <div class="hist-problem-box">
+                    <h1>We've All Been There...</h1>
+                    <p>Staring at your fridge, wondering what to cook with random ingredients. Ordering takeout again.
+                        Letting food go bad. There's a better way.</p>
+                </div>
+                <div class="solution-bg-box">
+                    <div class="cta-child3-box" id="problems-container">
+
+                    </div>
+                    <div class="cta-child3-box">
+                        <img class="toast-img" src="assets/toast.jpeg" alt="toast" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="works-container">
+        <div class="works-child1">
+            <div class="works-child2">
+                <div class="hist-problem-box">
+                    <h1>How Recipick Works</h1>
+                    <p>Three simple steps to transform your leftover ingredients into delicious meals</p>
+                </div>
+                <div class="how_grid_box how_grid_temp" id="how-container"></div>
+            </div>
+        </div>
+    </section>
+    <section class="choice-container">
+        <div class="choice-child1">
+            <div class="choice-child2">
+                <div class="hist-problem-box">
+                    <h1>Why Choose Recipick?</h1>
+                    <p>More than just recipe suggestions - we're your complete cooking companion</p>
+                </div>
+                <div>
+                    <div class="how_grid_box choice_grid_temp" id="choice-container"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="f-cta">
+        <div class="f-child1">
+            <div class="f-child2">
+                <div class="f-cta-box">
+                    <h1>Ready to Stop Wasting Food?</h1>
+                    <p>Join other home cooks who are saving money, reducing waste, and discovering amazing new recipes
+                        every day.</p>
+                </div>
+                <button onclick="location.href='register.html'" class="f-cta-button">
+                    <div class="f-cta-button-box">
+                        <p>Start cooking today - It's free</p>
+                        <img class="btn-arrow" src="assets/green-arrow.png" alt="green arrow" />
+                    </div>
+                </button>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>© <span id="year"></span> Recipick. All rights reserved.</p>
+    </footer>
     <script src="js/landing.js"></script>
 </body>
 
