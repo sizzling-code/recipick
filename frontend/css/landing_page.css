@@ -31,15 +31,36 @@ body {
 }
 
 .nav-container,
-.cta-child1 {
+.cta-child1,
+.problem-child1,
+.works-child1,
+.choice-child1,
+.f-child1 {
   display: flex;
   justify-content: center;
 }
 
-.nav-nameBox {
+.how_icon_box,
+.how-cards,
+.how_txt,
+.problem-icon,
+.hist-problem-box,
+.hist-problem-box,
+.benefit,
+.stc-box,
+.ai-def,
+.nav-nameBox,
+.procedure_num,
+.choice-icon-box,
+.f-cta-box,
+.f-cta-button-box,
+.f-child2 {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.nav-nameBox {
   gap: .5rem;
 }
 
@@ -49,7 +70,11 @@ body {
 }
 
 .nav-navBox,
-.cta-child2 {
+.cta-child2,
+.problem-child2,
+.works-child2,
+.choice-child2,
+.f-child2 {
   width: 80%;
 }
 
@@ -90,15 +115,23 @@ body {
 
 .l_i {
   background: transparent;
+  color: black;
 }
 
 .l_i:hover {
   background-color: var(--green-100);
 }
 
+.problem-Container,
+.cta-container,
+.works-container,
+.choice-container,
+.f-cta {
+  padding: 6rem 0;
+}
+
 .cta-container {
   background: linear-gradient(to right, var(--green-50) 55%, white 70%);
-  padding: 6rem 0;
 }
 
 .green-sparkle {
@@ -112,7 +145,7 @@ body {
 }
 
 .cta-paragraph {
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   line-height: 1.75rem;
   max-width: 90%;
   color: var(--gray-600);
@@ -169,9 +202,6 @@ body {
   border-radius: 5px;
   font-size: 0.75rem;
   line-height: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: 5px;
 }
 
@@ -189,6 +219,7 @@ body {
   height: 100%;
   overflow: hidden;
   border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .flag p {
@@ -208,6 +239,7 @@ body {
 
 .acc_pres_btn {
   background-color: white;
+  color: black;
   border-radius: 10px;
   border: 1px solid var(--green-100);
   padding: .8rem 1rem;
@@ -238,9 +270,6 @@ body {
 }
 
 .stc-box {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: .4rem;
 
 }
@@ -256,14 +285,213 @@ body {
 }
 
 .benefit {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   gap: .4rem;
   font-size: .75rem;
   color: var(--gray-600);
 }
 
+.hist-problem-box h1, 
+.f-cta-box h1 {
+  font-size: 2.25rem;
+}
+
+.hist-problem-box p {
+  color: var(--gray-600);
+  font-size: 1.25rem;
+  max-width: 60%;
+  margin: 0;
+}
+
+.how-cards,
+.how_txt,
+.hist-problem-box {
+  flex-direction: column;
+}
+
+.hist-problem-box {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.solution-bg-box {
+  display: flex;
+  gap: 1rem;
+}
+
+.toast-img {
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.this-sol {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+
+}
+
+.def-sol h3 {
+  margin: 0;
+}
+
+.works-container {
+  background: var(--green-50);
+}
+
+.problem-icon {
+  background-color: var(--red-100);
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+}
+
+.how_grid_box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+}
+.how_grid_temp{
+  gap: 1rem;
+}
+.choice_grid_temp{
+  gap: 1.5rem;
+}
+
+.how-cards {
+  border-radius: 10px;
+  background-color: #fff;
+  position: relative;
+  padding-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  transition: transform 0.3s ease;
+}
+
+.how-cards:hover {
+  transform: scale(1.03);
+}
+
+.procedure_num {
+  position: absolute;
+  top: -10px;
+  background-color: var(--green-600);
+  width: 30px;
+  height: 30px;
+  color: #fff;
+  border-radius: 50%;
+  font-weight: bold;
+
+}
+
+.how_icon_box {
+  background-color: var(--green-100);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  margin-top: 3rem;
+}
+
+.how_icon {
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
+.how_txt {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.how_txt p {
+  max-width: 80%;
+  line-height: 1.5rem;
+}
+
+.choice_card {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  padding: 1rem;
+  transition: transform 0.1s ease;
+}
+.choice_card:hover{
+  transform: scale(1.01);
+}
+
+.choice-icon-box {
+  height: 3rem;
+  width: 3rem;
+  border-radius: 10px;
+}
+
+.clock-box {
+  background-color: var(--blue-100);
+}
+.checkmark-box{
+  background-color: var(--green-100);
+}
+.purple-sparkle-box{
+  background-color: var(--purple-100);
+}
+.book-box{
+  background-color: var(--orange-100);
+}
+.group-box{
+  background-color: var(--red-100);
+}
+.star-box{
+  background-color: var(--yellow-100);
+
+}
+
+.choice-icon {
+  height: 1.5rem;
+  width: 1.5rem;
+}
+
+.choice-txt {
+  margin-top: 2rem;
+}
+
+.choice-txt p {
+  color: var(--gray-600);
+  line-height: 1.5rem;
+}
+
+.f-cta, 
+footer{
+  background-color: var(--green-700);
+}
+.f-cta-box{
+  flex-direction: column;
+  color: #fff;
+  text-align: center;
+}
+.f-child2{
+  flex-direction: column;
+}
+.f-cta-box p{
+  margin: 0;
+  max-width: 60%;
+}
+.f-cta-button-box{
+  gap: 1rem;
+}
+.f-cta-button{
+  padding: 0 1rem;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1rem;
+  background-color: #fff;
+  color: black;
+}
+.f-cta-button:hover{
+  background-color: var(--green-100);
+  cursor: pointer;
+}
+footer p{
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 2rem 0;
+  border-top: 1px solid var(--green-100);
+}
 
 @media (max-width: 1023px) {
   .cta-txt-box h1 {
@@ -292,20 +520,45 @@ body {
     height: 100%;
     margin-top: 3rem;
   }
+
   .flag {
     top: 35px;
     right: -5px;
+  }
+
+  .solution-bg-box {
+    flex-direction: column;
+  }
+
+  .hist-problem-box p,
+  .f-cta-box p{
+    max-width: 100%;
   }
 }
 
 @media (max-width: 767px) {
 
   .nav-navBox,
-  .cta-child2 {
+  .cta-child2,
+  .problem-child2,
+  .works-child2,
+  .choice-child2,
+  .f-child2 {
     width: 90%;
   }
 
-  .cta-container {
+  .cta-container,
+  .problem-Container,
+  .works-container,
+  .choice-container,
+  .f-cta {
     padding: 4rem 0;
+  }
+
+  .how_grid_box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .how-cards{
+    margin-top: 1rem;
   }
 }
