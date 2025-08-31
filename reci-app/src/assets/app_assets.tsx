@@ -97,3 +97,24 @@ export const choices = [
             "Core features are completely free. No hidden costs, no premium tiers for basic functionality."
     }
 ];
+
+export const previousRecipes = [
+    {
+        title: "Tomato Basil Pasta",
+        description: "A fresh and aromatic pasta dish with ripe tomatoes and fragrant basil.",
+        time: "25 mins",
+        date: "Jan 15, 2025",
+    },
+    {
+        title: "Chicken Herb Salad",
+        description: "Light and healthy salad with grilled chicken and mixed herbs.",
+        time: "15 mins",
+        date: "Jan 15, 2025",
+    },
+    {
+        title: "Creamy Mushroom Risotto",
+        description: "Rich and creamy risotto with sautéed mushrooms and parmesan.",
+        time: "35 mins",
+        date: "Jan 15, 2025",
+    },
+];
