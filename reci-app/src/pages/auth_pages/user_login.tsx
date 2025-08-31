@@ -1,8 +1,24 @@
+import AuthForm from "../../components/authForm";
+
 const UserLogin = () => {
+  const handleLogin = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
   return (
-    <>
-        <p>hello this is the login</p>
-    </>
+    <AuthForm
+      title="Welcome Back"
+      subtitle="Sign in to your Recipick account"
+      fields={[
+        { label: "Email", type: "email", id: "email", name: "email" },
+        { label: "Password", type: "password", id: "password", name: "password" },
+      ]}
+      buttonText="Login"
+      onSubmit={handleLogin}
+      redirectText="Don't have an account?"
+      redirectHref="/register"
+      redirectBtnText="Register Here"
+    />
   );
 };
 

@@ -1,10 +1,11 @@
 import { benefits, steps, choices, problems } from "../../assets/app_assets";
 import Navbar from "../../components/app_nav";
+import AppFooter from "../../components/app_footer";
 import ReusableButton from "../../components/green_btn";
 import "./landing.css"
 
 function Landing() {
-    const year = new Date().getFullYear();
+
 
     return (
         <>
@@ -219,10 +220,10 @@ function Landing() {
                     </div>
                 </div>
             </section>
+            <AppFooter>
 
-            <footer>
-                <p>© {year} <span id="year"></span> Recipick. All rights reserved.</p>
-            </footer>
+            </AppFooter>
+
         </>
     )
 }

@@ -1,0 +1,139 @@
+.login_container {
+    background-color: var(--green-50);
+    height: 100vh;
+}
+
+.auth_child1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.back_arrow_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+
+.back_arrow_box p {
+    margin: 0;
+}
+
+.back_arrow_btn {
+    background-color: transparent;
+    padding: .5rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+}
+
+.auth_form_box {
+    width: 100%;
+    max-width: 28rem;
+}
+
+.back_arrow_btn:hover {
+    cursor: pointer;
+    color: var(--green-600);
+    background-color: var(--green-100);
+}
+
+.login-form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.form_text_box {
+    text-align: center;
+}
+
+.form_text_box h1 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+
+.form_text_box p {
+    color: var(--gray-600);
+}
+
+.auth_form {
+    margin-top: 2rem;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.form-field label,
+.redirect_text {
+    font-size: 0.875rem;
+    line-height: 1.25rem;
+}
+
+.form-field label {
+    font-weight: 600;
+}
+
+.auth_form_btn,
+.form-field input {
+    height: 2rem;
+    border-radius: 10px;
+}
+
+.form-field input {
+    background-color: #f3f3f5;
+    border: 1px solid rgb(221, 221, 221);
+}
+
+.form-field input:focus {
+    outline: none;
+    border: 1px solid var(--green-600);
+    box-shadow: 0 0 0 2px rgba(22, 163, 74, 0.3);
+}
+
+.rdct_box {
+    display: flex;
+    gap: .3rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.rdrct_btn {
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    color: var(--green-600);
+}
+
+.rdrct_btn:hover {
+    color: var(--green-700);
+    cursor: pointer;
+    height: fit-content;
+}
+
+.auth_form_btn {
+    width: 100%;
+    margin: 1rem 0;
+    background-color: var(--green-600);
+    color: #fff;
+    border: none;
+}
+
+.auth_form_btn:hover {
+    background-color: var(--green-700);
+    cursor: pointer;
+}
+
+
+@media (max-width: 767px) {
+    .auth_form_box {
+        width: 100%;
+        max-width: 90%;
+    }
+}

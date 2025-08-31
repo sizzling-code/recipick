@@ -3,6 +3,8 @@ import Landing from './pages/landing_page/landing';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserLogin from './pages/auth_pages/user_login';
 import Register from './pages/auth_pages/register';
+import UserHome from './pages/user_pages/user_home';
+import UserProfile from './pages/user_pages/userProfile';
 
 
 function App() {
@@ -12,6 +14,8 @@ function App() {
         <Route path="/" element={<Landing />} />
         <Route path="/login" element={<UserLogin />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/user-home" element={<UserHome />} />
+        <Route path="/user-profile" element={<UserProfile />} />
       </Routes>
     </Router>
   )
