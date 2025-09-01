@@ -1,0 +1,3 @@
+.custom-progress {
+  background: linear-gradient(to right, var(--green-600), var(--green-700));
+}

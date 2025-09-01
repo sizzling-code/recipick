@@ -32,8 +32,10 @@ from src.views.users.login_user import login_bp
 from src.views.users.register_user import register_bp
 from src.views.users.logout_user import logout_bp
 from src.views.users.update_user import update_user_bp
+from src.views.services.recipes import recipes_bp
 
 app.register_blueprint(register_bp)
 app.register_blueprint(login_bp)
 app.register_blueprint(logout_bp)
 app.register_blueprint(update_user_bp)
+app.register_blueprint(recipes_bp)
