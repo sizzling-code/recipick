@@ -12,7 +12,7 @@ app.config.from_object(config('APP_SETTINGS'))
 db.init_app(app)
 bcrypt.init_app(app)
 migrate.init_app(app, db)
-CORS(app, origins=['http://localhost:5173'], supports_credentials=True)
+CORS(app, origins=['http://localhost:5173', 'https://super-frangipane-b80e95.netlify.app'], supports_credentials=True)
 app.config["JWT_SECRET_KEY"] = config('JWT_SECRET_KEY')
 jwt = JWTManager(app)
 
