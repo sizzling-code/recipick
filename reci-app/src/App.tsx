@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import Landing from './pages/landing_page/landing';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import UserLogin from './pages/auth_pages/user_login';
@@ -6,39 +5,12 @@ import Register from './pages/auth_pages/register';
 import UserHome from './pages/user_pages/user_home';
 import UserProfile from './pages/user_pages/userProfile';
 import ProtectedRoute from './components/protected_route';
-import HashLoader from "react-spinners/HashLoader";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import './App.css';
 
 function App() {
-  const [isLoaded, setIsLoaded] = useState(false);
 
-  useEffect(() => {
-    const handleLoad = () => setIsLoaded(true);
-
-    window.addEventListener("load", handleLoad);
-
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, []);
-
-  if (!isLoaded) {
-    return (
-      <div
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          minHeight: "100vh",
-          backgroundColor: "white"
-        }}
-      >
-        <HashLoader color="#16A34A" size={80} />
-      </div>
-    );
-  }
 
   return (
     <>
