@@ -32,7 +32,7 @@ const UserProfile: React.FC = () => {
             if (!token) return;
 
             try {
-                const res = await fetch("http://127.0.0.1:5000/user-profile", {
+                const res = await fetch("https://list-la.onrender.com/user-profile", {
                     headers: {
                         Authorization: `Bearer ${token}`,
                     },
@@ -61,7 +61,7 @@ const UserProfile: React.FC = () => {
             if (!token) return handleLogout();
 
             try {
-                const resUser = await fetch("http://127.0.0.1:5000/user-profile", {
+                const resUser = await fetch("https://list-la.onrender.com/user-profile", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
 
@@ -70,7 +70,7 @@ const UserProfile: React.FC = () => {
                 setUser(dataUser.user);
                 setNewUsername(dataUser.user.username);
 
-                const resRecipes = await fetch("http://127.0.0.1:5000/my-recipes", {
+                const resRecipes = await fetch("https://list-la.onrender.com/my-recipes", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
 
@@ -96,7 +96,7 @@ const UserProfile: React.FC = () => {
         if (!token) return handleLogout();
 
         try {
-            const res = await fetch(`http://127.0.0.1:5000/users/${user.id}`, {
+            const res = await fetch(`https://list-la.onrender.com/users/${user.id}`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
