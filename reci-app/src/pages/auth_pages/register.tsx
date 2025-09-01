@@ -3,7 +3,7 @@ import AuthForm from "../../components/authForm";
 const Register = () => {
   const handleRegister = (e: React.FormEvent) => {
     e.preventDefault();
-
+    window.location.href = "/user-home";
   };
 
   return (
