@@ -282,6 +282,9 @@
 .statistics-recipes_user p {
     color: var(--gray-600);
 }
+.user_name{
+    text-transform: capitalize;
+}
 
 @media (max-width: 1023px) {
     .user_child2 {

@@ -7,7 +7,7 @@ interface AuthFormProps {
   subtitle: string;
   fields: { label: string; type: string; id: string; name: string }[];
   buttonText: string;
-  onSubmit: (e: React.FormEvent) => void;
+  onSubmit: (e: React.FormEvent<HTMLFormElement>) => void | Promise<void>;
   backHref?: string;
   redirectText?: string;
   redirectHref?: string;

@@ -1,11 +1,16 @@
 from flask import Blueprint, jsonify
-from flask_login import logout_user, login_required
+from flask_jwt_extended import jwt_required, get_jwt
 from src.views.responses import success_logout
 
 logout_bp = Blueprint('logout', __name__)
 
+token_blacklist = set()
+
 @logout_bp.route('/logout', methods=['POST'])
-@login_required
+@jwt_required()
 def logout():
-    logout_user()
+    jti = get_jwt()["jti"]
+    
+    token_blacklist.add(jti)
+    
     return jsonify(success_logout), 200

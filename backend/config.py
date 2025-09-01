@@ -15,6 +15,9 @@ class Config(object):
     WTF_CSRF_ENABLED = True
     DEBUG_TB_ENABLED = False
     DEBUG_TB_INTERCEPT_REDIRECTS = False
+    SESSION_COOKIE_SECURE=True    
+    SESSION_COOKIE_SAMESITE='None'
+    SESSION_COOKIE_HTTPONLY = True
     
 class DevelopmentConfig(Config):
     DEVELOPMENT = True
