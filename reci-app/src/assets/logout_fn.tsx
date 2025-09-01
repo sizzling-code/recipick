@@ -6,7 +6,7 @@ export const handleLogout = async () => {
 
     if (token) {
       await axios.post(
-        "http://127.0.0.1:5000/logout",
+        "https://list-la.onrender.com/logout",
         {},
         {
           headers: { Authorization: `Bearer ${token}` },

@@ -24,7 +24,7 @@ const ProtectedRoute = ({ children }: ProtectedRouteProps) => {
             try {
                 console.log('yayy, still token');
                 
-                const res = await fetch("http://127.0.0.1:5000/user-home", {
+                const res = await fetch("https://list-la.onrender.com/user-home", {
                     method: "GET",
                     headers: {
                         "Authorization": `Bearer ${token}`,

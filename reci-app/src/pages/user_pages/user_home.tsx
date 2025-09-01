@@ -32,14 +32,14 @@ const UserHome: React.FC = () => {
             if (!token) return handleLogout();
 
             try {
-                const resUser = await fetch("http://127.0.0.1:5000/user-home", {
+                const resUser = await fetch("https://list-la.onrender.com/user-home", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (!resUser.ok) return handleLogout();
                 const dataUser = await resUser.json();
                 setUser(dataUser.user);
 
-                const resRecipes = await fetch("http://127.0.0.1:5000/my-recipes", {
+                const resRecipes = await fetch("https://list-la.onrender.com/my-recipes", {
                     headers: { Authorization: `Bearer ${token}` },
                 });
                 if (resRecipes.ok) {
@@ -65,7 +65,7 @@ const UserHome: React.FC = () => {
         try {
             setLoading(true);
 
-            const res = await fetch("http://127.0.0.1:5000/generate", {
+            const res = await fetch("https://list-la.onrender.com/generate", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -181,7 +181,7 @@ const UserHome: React.FC = () => {
                                         const token = localStorage.getItem("token");
                                         if (!token) return;
 
-                                        const res = await fetch(`http://127.0.0.1:5000/delete/${id}`, {
+                                        const res = await fetch(`https://list-la.onrender.com/delete/${id}`, {
                                             method: "DELETE",
                                             headers: { Authorization: `Bearer ${token}` },
                                         });
@@ -194,7 +194,7 @@ const UserHome: React.FC = () => {
                                     }}
                                     onToggleFavorite={async (id) => {
                                         const token = localStorage.getItem("token");
-                                        await fetch(`http://127.0.0.1:5000/favourite/${id}`, {
+                                        await fetch(`https://list-la.onrender.com/favourite/${id}`, {
                                             method: "POST",
                                             headers: { Authorization: `Bearer ${token}` },
                                         });
@@ -224,7 +224,7 @@ const UserHome: React.FC = () => {
                                             recipe={recipe}
                                             onToggleFavorite={async (id) => {
                                                 const token = localStorage.getItem("token");
-                                                await fetch(`http://127.0.0.1:5000/favourite/${id}`, {
+                                                await fetch(`https://list-la.onrender.com/favourite/${id}`, {
                                                     method: "POST",
                                                     headers: { Authorization: `Bearer ${token}` },
                                                 });
