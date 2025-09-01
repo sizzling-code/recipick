@@ -3,6 +3,7 @@ import AuthForm from "../../components/authForm";
 const UserLogin = () => {
   const handleLogin = (e: React.FormEvent) => {
     e.preventDefault();
+    window.location.href = "/user-home";
   };
 
   return (
