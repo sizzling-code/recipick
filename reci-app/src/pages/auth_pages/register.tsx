@@ -1,8 +1,8 @@
 import AuthForm from "../../components/authForm";
-
+import { toast } from "react-toastify";
 
 const Register = () => {
-  const handleRegister = async (e: React.FormEvent<HTMLFormElement>): Promise<void>=> {
+  const handleRegister = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
     e.preventDefault();
 
     const formData = new FormData(e.currentTarget);
@@ -12,7 +12,12 @@ const Register = () => {
     const confirm_password = formData.get("confirm_password") as string;
 
     if (password !== confirm_password) {
-      alert("Passwords do not match!");
+      toast.error("Passwords do not match!");
+      return;
+    }
+
+    if (password.length < 8) {
+      toast.error("Password must be at least 8 characters long.");
       return;
     }
 
@@ -32,18 +37,18 @@ const Register = () => {
 
       if (!res.ok) {
         const errorData = await res.json();
-        console.error("Registration failed:", errorData);
-        alert("Registration failed. Check console for details.");
+        toast.error(errorData.error || "Registration failed.");
         return;
       }
 
       const data = await res.json();
       console.log("Registration successful:", data);
+      toast.success("Registration successful! 🎉 Redirecting...");
 
       window.location.href = "/user-home";
     } catch (error) {
       console.error("Error during registration:", error);
-      alert("Something went wrong. Try again later.");
+      toast.error("Something went wrong. Try again later.");
     }
   };
 

@@ -1,4 +1,5 @@
 import AuthForm from "../../components/authForm";
+import { toast } from "react-toastify";
 
 const UserLogin = () => {
   const handleLogin = async (e: React.FormEvent<HTMLFormElement>): Promise<void> => {
@@ -24,7 +25,7 @@ const UserLogin = () => {
       window.location.href = "/user-home";
     } catch (err) {
       console.error(err);
-      alert("Login failed. Please check your credentials.");
+      toast.error("Login failed. Please check your credentials.");
     }
   };
 

@@ -21,7 +21,8 @@ export const handleLogout = async () => {
   } catch (err) {
     console.error("Logout failed:", err);
     localStorage.removeItem("token");
-    localStorage.removeItem("user");
+    localStorage.removeItem("Username");
     window.location.href = "/login";
+    localStorage.removeItem("User");
   }
 };
