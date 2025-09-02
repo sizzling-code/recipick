@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Settings</title>
+    <link rel="stylesheet" href="css/user_profile.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Recipick</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">My Recipes</a>
+            <a href="#" class="active">Profile</a>
+        </nav>
+        <div class="user">Hi, tea</div>
+    </header>
+
+    <main>
+        <h1>Profile Settings</h1>
+        <p class="subtitle">Manage your account information</p>
+
+        <section class="card">
+            <h2>Account Information</h2>
+            <div class="info">
+                <div>
+                    <strong>Username</strong>
+                    <p>tea</p>
+                </div>
+                <button class="edit-btn">Edit</button>
+            </div>
+            <div>
+                <strong>Email</strong>
+                <p>tea@example.com</p>
+                <small>Email cannot be changed. Contact support if you need to update your email.</small>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 class="red">Account Actions</h2>
+            <button class="signout-btn">Sign Out</button>
+            <p>Sign out of your Recipick account</p>
+        </section>
+
+        <section class="card stats">
+            <div>
+                <h3 class="green">12</h3>
+                <p>Recipes Created</p>
+            </div>
+            <div>
+                <h3 class="green">8</h3>
+                <p>Favorites</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/user_profile.js"></script>
+</body>
+</html>
