@@ -108,7 +108,9 @@ Your frontend should now be accessible at [http://localhost:5173](http://localho
 Teamwork matters! Below is the list of contributors, their roles, and emails:
 
 * **Bett Romanus** – Frontend & Backend Developer – [bettromanus@gmail.com](mailto:bettromanus@gmail.com)
-* **Mercy Nyambura** – Frontend Developer (Login and Register Pages) – [mercynyambura@example.com](mailto:mercikamau131@gmail.com)
+
+* **Mercy Nyambura** – Frontend Developer (Login and Register Pages) – [mercikamau131@gmail.com](mailto:mercikamau131@gmail.com)
+
 * **Cecilia Thuo** – Frontend Developer (User Home page and Profile) – [ceciliathuo005@gmail.com](mailto:ceciliathuo005@gmail.com)
 
 All team members contributed to coding, testing, and project management.
